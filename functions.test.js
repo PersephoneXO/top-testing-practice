@@ -5,7 +5,10 @@ test('adds 1 + 2 to equal 3', () => {
 });
 */
 
-import { capitalize } from "./functions.js";
+import { capitalize,
+        reverseString,
+        caesarCipher
+} from "./functions.js";
 
 //capitalize(str)
 test(`capitalize(str) changes the string 'hello' to 'Hello'`,()=>{
@@ -15,4 +18,9 @@ test(`capitalize(str) changes the string 'hello' to 'Hello'`,()=>{
 //reverseString(str)
 test(`reverseString(str) changes 'hello' to 'olleh'`,()=>{
     expect(reverseString('hello')).toBe('olleh');
-})
+});
+
+//caesarCipher(str,shift)
+test(`caesarCipher(str,shift) takes 'hello' and 1 and returns 'ifmmp'`,()=>{
+    expect(caesarCipher('hello',1)).toBe('ifmmp');
+});
