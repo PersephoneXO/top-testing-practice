@@ -7,8 +7,9 @@ test('adds 1 + 2 to equal 3', () => {
 
 import { capitalize,
         reverseString,
-        caesarCipher
+        caesarCipher,
 } from "./functions.js";
+import { calculator } from "./functions.js";
 
 //capitalize(str)
 test(`capitalize(str) changes the string 'hello' to 'Hello'`,()=>{
@@ -18,6 +19,20 @@ test(`capitalize(str) changes the string 'hello' to 'Hello'`,()=>{
 //reverseString(str)
 test(`reverseString(str) changes 'hello' to 'olleh'`,()=>{
     expect(reverseString('hello')).toBe('olleh');
+});
+
+//calculator()
+test(`calculator.add(2,3) returns 5`,()=>{
+    expect(calculator.add(2,3)).toBe(5);
+});
+test(`calculator.subtract(5,2) returns 3`,()=>{
+    expect(calculator.subtract(5,2)).toBe(3);
+});
+test(`calculator.divide(18,9) returns 2`,()=>{
+    expect(calculator.divide(18,9)).toBe(2);
+});
+test(`calculator.multiply(5,10) returns 50`,()=>{
+    expect(calculator.multiply(5,10)).toBe(50);
 });
 
 //caesarCipher(str,shift)
