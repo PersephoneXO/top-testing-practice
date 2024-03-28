@@ -72,8 +72,46 @@ function caesarCipher(str,shift){
     return cipherStr;
 }
 
+//5.
+function analyzeArray(arr){
+    let object={};
+
+    //average
+    let sum=0;
+    for(let each of arr){
+        sum+=each;
+    }
+    let avg=sum/arr.length;
+    object.average=avg;
+
+    //min
+    let min=arr[0];
+    for(let each of arr){
+        if(min>each){
+            min=each;
+        }
+    }
+    object.min=min;
+
+    //max
+    let max=arr[0];
+    for(let each of arr){
+        if(max<each){
+            max=each;
+        }
+    }
+    object.max=max;
+
+    //length
+    object.length=arr.length;
+
+    return object;
+}
+
+
 export {
     capitalize,
     reverseString,
-    caesarCipher
+    caesarCipher,
+    analyzeArray
 }

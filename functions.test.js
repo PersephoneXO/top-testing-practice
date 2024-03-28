@@ -8,6 +8,7 @@ test('adds 1 + 2 to equal 3', () => {
 import { capitalize,
         reverseString,
         caesarCipher,
+        analyzeArray
 } from "./functions.js";
 import { calculator } from "./functions.js";
 
@@ -39,3 +40,19 @@ test(`calculator.multiply(5,10) returns 50`,()=>{
 test(`caesarCipher(str,shift) takes 'hello' and 1 and returns 'ifmmp'`,()=>{
     expect(caesarCipher('hello',1)).toBe('ifmmp');
 });
+
+//analyzeArray(arr)
+test(`analyzeArray([1,8,3,4,2,6]) returns
+    object == {
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
+    };`,()=>{
+    expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+      })
+  });
